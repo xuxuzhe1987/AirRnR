@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  # skip_before_action :authenticate_user!
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -11,6 +12,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book.user_id = current_user.id
     if @book.save
       redirect_to books_path
     else
@@ -41,6 +43,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :author)
+    params.require(:book).permit(:title, :author, :description, :availability)
   end
 end
