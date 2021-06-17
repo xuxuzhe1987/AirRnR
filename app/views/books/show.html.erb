@@ -2,7 +2,7 @@
 <p>Author: <%= @book.author %></p>
 <p>Description: <%= @book.description %></p>
 <p>Availability: <%= @book.availability %></p>
-<p>Owner: <%= current_user.email %></p>
+<p>Owner: <%= @book.user.email %></p>
 
 <%= link_to 'Edit', edit_book_path(@book) %>
 <%= link_to "Delete",
@@ -10,4 +10,5 @@
             method: :delete,
             data: { confirm: "Are you sure?" } %>
 <%= link_to 'Back', books_path %>
+<%= link_to 'Borrow', new_book_booking_path(@book) %>
 

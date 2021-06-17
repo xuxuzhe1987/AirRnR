@@ -1,13 +1,1 @@
-<h1>LIST ALL BOOKS</h1>
-<ul>
-  <% @books.each do |book| %>
-    <li>Title: <%= link_to book.title, book_path(book) %></li>
-    <li>Author: <%= book.author %></li>
-    <li>Description: <%= book.description %></li>
-    <li>Availability: <%= book.availability %></li>
-    <li>Owner: <%= current_user.email %></li>
-    <br>
-  <% end %>
-</ul>
 
-<%= link_to 'share your book', new_book_path %>
