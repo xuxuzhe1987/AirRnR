@@ -1,4 +1,5 @@
 <h1>Booking List</h1>
 <p>Book: <%= @booking.book.title %></p>
-<p>Borrower: <%= current_user.email %></p>
+<p>Borrower: <%= @booking.user.email %></p>
 <p>Lender: <%= @booking.book.user.email %></p>
+<p>Period: <%= @booking.starting_date %> to <%= @booking.ending_date %></p>
