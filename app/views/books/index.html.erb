@@ -1,13 +1,17 @@
 <h1>LIST ALL BOOKS</h1>
-<ul>
+<div class="d-flex flex-wrap p-2">
   <% @books.each do |book| %>
-    <li>Title: <%= link_to book.title, book_path(book) %></li>
-    <li>Author: <%= book.author %></li>
-    <li>Description: <%= book.description %></li>
-    <li>Availability: <%= book.availability %></li>
-    <li>Owner: <%= book.user.email %></li>
-    <br>
+  <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 16rem;">
+    <!-- need to add an image upload for the books -->
+    <img src="#" class="card-img-top" alt="book-img">
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to book.title, book_path(book) %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Author: <%= book.author %></h6>
+      <p class="card-text">Description: <%= book.description %> </p>
+      <p class="card-text">Availability: <%= book.availability %></p>
+      <br>
+    </div>
+  </div>
   <% end %>
-</ul>
-
-<%= link_to 'share your book', new_book_path %>
+</div>
+<%= link_to 'Add a Book!', new_book_path, class:"btn btn-outline-dark button-margin" %>
