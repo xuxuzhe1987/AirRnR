@@ -5,7 +5,7 @@
     <li>Author: <%= book.author %></li>
     <li>Description: <%= book.description %></li>
     <li>Availability: <%= book.availability %></li>
-    <li>Owner: <%= current_user.email %></li>
+    <li>Owner: <%= book.user.email %></li>
     <br>
   <% end %>
 </ul>
