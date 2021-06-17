@@ -4,6 +4,12 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+
+    # @search = params["search"]
+    # if @search.present?
+    #   @title = @search["title"]
+    #   @books = Book.where(title: @title)
+    # end
   end
 
   def new
