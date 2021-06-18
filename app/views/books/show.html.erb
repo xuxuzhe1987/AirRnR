@@ -1,14 +1,25 @@
-<h2><%= @book.title %></h2>
-<p>Author: <%= @book.author %></p>
-<p>Description: <%= @book.description %></p>
-<p>Availability: <%= @book.availability %></p>
-<p>Owner: <%= @book.user.email %></p>
-
-<%= link_to 'Edit', edit_book_path(@book) %>
-<%= link_to "Delete",
+<div class="container m-3">
+  <div class="container d-flex justify-content-evenly">
+  <%= image_tag "gatsb-cover", alt: "alttext" %>
+    <br>
+    <div class="book-container card shadow p-3 mb-5 bg-body rounded">
+      <h2><%= @book.title %></h2>
+      <h5 class="card-subtitle mb-2 text-muted">Author: <%= @book.author %></h5>
+      <br>
+      <p>Description: <%= @book.description %></p>
+      <p>Availability: <%= @book.availability %></p>
+      <p>Owner: <%= link_to "#{@book.user.email}", user_path %></p>
+      <div class="button-helpers">
+        <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
+        <%= link_to "Delete",
             book_path(@book),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
-<%= link_to 'Back', books_path %>
-<%= link_to 'Borrow', new_book_booking_path(@book) %>
+            data: { confirm: "Are you sure?" },
+            class: 'btn btn-outline-danger' %>
+        <%= link_to 'Back', books_path, class: 'btn btn-outline-dark' %>
+        <%= link_to 'Borrow', new_book_booking_path(@book), class: 'btn btn-outline-secondary' %>
+      </div>
+    </div>
+  </div>
 
+</div>
