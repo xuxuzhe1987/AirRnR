@@ -38,3 +38,23 @@ $grid-breakpoints: (
   width: 40px;
   border-radius: 50%;
 }
+
+.banner {
+  height: 100vh;
+  background-size: cover;
+  background-image: asset-url("bookrow");
+  background-size: cover;
+  h1 {
+    color: white;
+    font-family: 'Avenir';
+    background:
+    linear-gradient(
+      rgba(40, 40, 40, 0.5),
+      rgba(40, 40, 40, 0.5)
+    );
+  }
+}
+
+.btn-light {
+  box-shadow: 10px 5px 5px black;
+}
