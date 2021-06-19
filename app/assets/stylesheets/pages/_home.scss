@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&family=Benne&display=swap');
+
+
+.banner {
+  position:relative;
+  top:0px;
+  height: 80vh;
+  background-size: cover;
+  background-image: asset-url("bookrow");
+  background-size: cover;
+  h1 {
+    color: #F7B832;
+    font-family: 'Benne', serif;
+    background:
+    linear-gradient(
+      rgba(40, 40, 40, 0.5),
+      rgba(40, 40, 40, 0.5)
+    );
+    // padding-top: 6px;
+    // box-shadow: 2px 2px 2px 1px gold;
+  }
+}
+.btn-info {
+  position: relative;
+  top: 30px;
+}
+
+.call {
+  position:relative;
+  top: 60px;
+}
+
+.background-color {
+  background:
+    linear-gradient(
+      rgba(40, 40, 40, 0.5),
+      rgba(40, 40, 40, 0.5)
+      );
+  color: #F7B832;
+}
+
+.tex-left {
+  font-family: 'BenchNine', sans-serif;
+  top-margin: 8px;
+}
