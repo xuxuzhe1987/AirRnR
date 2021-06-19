@@ -1,5 +1,10 @@
 <h1>Booking List</h1>
 <p>Book: <%= @booking.book.title %></p>
-<p>Borrower: <%= @booking.user.email %></p>
-<p>Lender: <%= @booking.book.user.email %></p>
-<p>Period: <%= @booking.starting_date %> to <%= @booking.ending_date %></p>
+<p>Borrower: <%= @booking.user.name %></p>
+<p>Lender Name: <%= @booking.book.user.name %></p>
+<p>Lender WeChat: <%= @booking.book.user.we_chat %></p>
+<p>Lender Email: <%= @booking.book.user.email %></p>
+<p>Lender Address: <%= @booking.book.user.address %></p>
+<p>Booking Period: <%= @booking.starting_date %> to <%= @booking.ending_date %></p>
+
+<%= link_to "Back to Books", books_path  %>
