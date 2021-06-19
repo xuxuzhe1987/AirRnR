@@ -1,0 +1,26 @@
+<div class="header">
+    <h2> <%= @user.name %>'s profile Details!</h2>
+</div>
+
+<div class="container d-flex">
+  <div class="card shadow p-3 mb-5 bg-body rounded">
+  <br>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address %>
+  </p>
+  <p>
+    <strong>WeChat:</strong>
+    <%= @user.we_chat %>
+  </p>
+  </div>
+  <div class="image">
+    <%= image_tag "user-show-page", alt: "user-picture" %>
+  </div>
+</div>
+
+<%= link_to 'Back', users_path, class: 'btn btn-outline-dark' %>

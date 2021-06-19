@@ -1,14 +1,14 @@
 <div class="container m-3">
   <div class="container d-flex justify-content-evenly">
-  <%= image_tag "gatsb-cover", alt: "alttext" %>
+    <%= image_tag "book-rise", alt: "image of a book"%>
     <br>
-    <div class="book-container card shadow p-3 mb-5 bg-body rounded">
+    <div class="book-container card shadow p-3 mb-5 bg-body rounded card-position">
       <h2><%= @book.title %></h2>
       <h5 class="card-subtitle mb-2 text-muted">Author: <%= @book.author %></h5>
       <br>
       <p>Description: <%= @book.description %></p>
       <p>Availability: <%= @book.availability %></p>
-      <p>Owner: <%= link_to "#{@book.user.email}", user_path %></p>
+      <p>Owner: <%= link_to "#{@book.user.name}", user_path %></p>
       <div class="button-helpers">
         <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
         <%= link_to "Delete",

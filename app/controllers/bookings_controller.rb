@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show]
 
+  def mybookings
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
   def new
     @book = Book.find(params[:book_id])
     @booking = Booking.new
