@@ -1,5 +1,6 @@
 
 <h1>LIST ALL BOOKS</h1>
+<%= link_to 'Add a Book!', new_book_path, class:"btn btn-outline-dark button-margin" %>
 <div class="d-flex flex-wrap p-2">
   <% @books.each do |book| %>
   <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 16rem;">
@@ -15,4 +16,4 @@
   </div>
   <% end %>
 </div>
-<%= link_to 'Add a Book!', new_book_path, class:"btn btn-outline-dark button-margin" %>
+
