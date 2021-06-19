@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Books.destroy_all
+Book.destroy_all
 
 10.times do
   user = User.create!(
@@ -23,7 +23,7 @@ Books.destroy_all
     title: Faker::Book.title,
     author: Faker::Book.author,
     description: Faker::TvShows::TheFreshPrinceOfBelAir.quote,
-    availability: false
+    availability: true
     )
   end
 end
