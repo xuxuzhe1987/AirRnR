@@ -3,8 +3,8 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all
-
+    # @books = Book.all
+    @books = policy_scope(Book)
     # @search = params["search"]
     # if @search.present?
     #   @title = @search["title"]
@@ -46,6 +46,7 @@ class BooksController < ApplicationController
 
   def set_book
     @book = Book.find(params[:id])
+    authorize @book
   end
 
   def book_params
