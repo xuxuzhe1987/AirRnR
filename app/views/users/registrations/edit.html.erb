@@ -17,6 +17,19 @@
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
+
+                <!-- additions to the edit form made below -->
+    <%= f.input :name,
+                required: false,
+                input_html: { autocomplete: "update-user-name" } %>
+    <%= f.input :we_chat,
+                required: false,
+                input_html: { autocomplete: "update-wechat" } %>
+    <%= f.input :address,
+                required: false,
+                input_html: { autocomplete: "update address" } %>
+
+                <!-- additions to the edit form made above  -->
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
