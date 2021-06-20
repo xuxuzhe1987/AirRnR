@@ -1,24 +1,28 @@
 <div class="banner d-flex justify-content-center align-items-center">
   <div class="inner text-center">
-   <h1> Read n' Relax: BnB of Books! </h1>
-     <div>
-        <h2><%= link_to 'Browse All Books', books_path, class: 'btn btn-info' %></h2>
-     </div>
-     <div class="call container">
-       <h2 class="background-color"> It is easy and free, go ahead and signup <br> to connect with other booklovers!</h2>
-       <h2><%= link_to 'Sign_Up', new_user_registration_path, class: 'btn btn-secondary' %></h2>
+   <h1 class="m-0 p-0"> MAKING READING <br> FUN AGAIN! </h1>
+    <h2><%= link_to 'Browse All Books', books_path, class: 'btn btn-info' %></h2>
      </div>
   </div>
+<div>
+  <div>
+    <div class="container d-flex">
+      <div class=" bordered p-3">
+        <h2 style="font-family: 'Benne', serif;">Follow these 5 simple steps:</h2>
+        <br>
+        <p>1. Sign-up to gain access to a wide collection of books!</p>
+        <p>2. Create your profile and share the books you have!</p>
+        <p>3. Browse books and see what you would like to borrow!</p>
+        <p>4. Click the borrow button and book a time!</p>
+        <p>5. Meet the person sharing the book and start your book-journey!</p>
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-outline-secondary' %>
+      </div>
+      <div class="picture p-3">
+        <%= image_tag "jbw-book", alt: "alttext", style: "height: 400px;
+  width: 350px;" %>
+      </div>
+      </div>
 </div>
-
-<div class="container card text-left">
-  <p> This app for those that love to read and share their books with others!<br>
-  If this is something for you, then go ahead and signup. <br> For all ages and genders - dont be shy and browse our books! </p>
-  <p> Who knows you might discover a new favourite! </p>
-  <br>
-  <p> Making reading fun again! </p>
-</div>
-
 
 <!--
 
@@ -29,3 +33,11 @@
 
 <!--
  -->
+<!--   <div class=" justify-content-center text-center p-3">
+    <h2"> It is easy and free, go ahead and signup <br> to connect with other booklovers!</h2>
+    <p> This app for those that love to read and share their books with others!<br>If this is something for you, then go ahead and signup. <br> For all ages and genders - dont be shy and browse our books!</p>
+
+  </div>
+</div> -->
+
+
