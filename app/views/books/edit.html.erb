@@ -1,13 +1,10 @@
-<h1>EDIT A BOOK</h1>
-
-<%= form_for(@book) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :availability %>
-  <%= f.check_box :availability %>
-  <%= f.submit %>
-<% end %>
+<h1 class= "text-center">EDIT A BOOK</h1>
+  <div class = "conatiner auto">
+    <div class = "row d-flex justify-content-center">
+        <div class = "col-12 col-md-6 col-lg-3">
+        <div class="bg-white rounded p-3 shadow">
+          <%= render "shared/form", book: @book %>
+        </div>
+      </div>
+    </div>
+  </div>
