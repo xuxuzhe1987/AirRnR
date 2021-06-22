@@ -3,11 +3,13 @@ class BookingsController < ApplicationController
 
   def mybookings
     @bookings = Booking.where(user_id: current_user.id)
+    authorize @bookings
   end
 
   def new
     @book = Book.find(params[:book_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -15,6 +17,7 @@ class BookingsController < ApplicationController
     @book = Book.find(params[:book_id])
     @booking.user_id = current_user.id
     @booking.book_id = @book.id
+    authorize @booking
     if @booking.save
       @book.availability = false
       @book.save
@@ -22,9 +25,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+
   end
 
   def show
+    authorize @booking
   end
 
   private

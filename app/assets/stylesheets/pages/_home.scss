@@ -4,57 +4,31 @@
 .banner {
   position:relative;
   top:0px;
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
   background-image: asset-url("bookrow");
   background-size: cover;
   h1 {
-    color: white;
+    color: #FFFAFA;
     font-family: 'Benne', serif;
     font-size: 70px;
-    background: black;
-    // padding-top: 6px;
-    // box-shadow: 2px 2px 2px 1px gold;
+    text-shadow: 1px 1px 2px black, 0 0 25px darkgray, 0 0 5px gray;
   }
-}
-.btn-info {
-  position: relative;
-  top: 30px;
-}
-
-.call {
-  position:relative;
-  top: 60px;
-}
-
-.background-color {
-  background: black;
-  color: white;
-}
-
-.tex-left {
-  font-family: 'BenchNine', sans-serif;
-  top-margin: 8px;
-}
-
-body {
-  background-color: white;
 }
 
 .bordered {
   border: double;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .p-3 h2 {
   font-size: 32px;
 }
-.p-3 p{
+.p-3 h3{
   font-family: 'Benne', serif;
-  font-size: 18px;
+  font-size: 24px
 }
 
-.btn-outline-secondary {
-  position: relative;
-  top: 25px;
+.p-3 p {
+  font-family: 'Benne', serif;
 }
