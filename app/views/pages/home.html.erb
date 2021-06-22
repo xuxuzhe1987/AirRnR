@@ -5,22 +5,31 @@
      </div>
   </div>
 <div>
-  <div>
-    <div class="container d-flex">
-      <div class=" bordered p-3">
-        <h2 style="font-family: 'Benne', serif;">Follow these 5 simple steps:</h2>
+  <div class="bordered">
+    <div class="d-flex">
+      <h2 style="font-family: 'Benne', serif;">Follow these 5 simple steps:</h2>
+      <div class="p-3">
         <br>
-        <p>1. Sign-up to gain access to a wide collection of books!</p>
-        <p>2. Create your profile and share the books you have!</p>
-        <p>3. Browse books and see what you would like to borrow!</p>
-        <p>4. Click the borrow button and book a time!</p>
-        <p>5. Meet the person sharing the book and start your book-journey!</p>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-outline-secondary' %>
+        <h3>1. Sign-up to gain access to a wide collection of books!</h3>
+
+        <h3>2. Create your profile and share the books you have!</h3>
+        <h3>3. Browse books and see what you would like to borrow!</h3>
+        <h3>4. Click the borrow button and book a time!</h3>
+        <h3>5. Meet the person advertising the book and start your book-journey!</h3>
+
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-info text-center' %>
       </div>
-      <div class="picture p-3">
-        <%= image_tag "jbw-book", alt: "alttext", style: "height: 400px;
-  width: 350px;" %>
-      </div>
+      <div class="p-3 text-center">
+        <br>
+<!--        <p> 1. All you have to do is type in your basic details, and choose a password.</p>
+       <p> 2. Maybe you have a few favourites gathering dust in your bookshelf, why not share with new friends.</p>
+       <p> 3. Maybe you feel adventurous and try a new genre, there are plenty of books in the sea.</p>
+       <p> 4. Literally a click of a button and choosing your borrow dates - you are good to go!</p>
+       <p> 5. All in a quick 5 minutes</p>
+      </div> -->
+<!--       <div class="picture p-3">
+        <%= image_tag "jbw-book", alt: "alttext", style: "height: 400px; width: 350px;" %>
+      </div> -->
       </div>
 </div>
 
