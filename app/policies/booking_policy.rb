@@ -5,6 +5,10 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
+  def mybookings?
+    true
+  end
+
   def create?
     true
   end
