@@ -1,4 +1,4 @@
-<h1>List All My Bookings</h1>
+<h1 class = "text-center">List All My Bookings</h1>
 <% @bookings.each_with_index do |booking, index| %>
   <p><%= index+1 %>. <%= booking.created_at %></p>
   <p>Book: <%= booking.book.title %></p>
