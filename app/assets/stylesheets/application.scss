@@ -21,6 +21,10 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 
+body {
+  background-color: white;
+}
+
 .button-margin {
   margin: 8px;
 }
@@ -39,5 +43,18 @@ $grid-breakpoints: (
   border-radius: 50%;
 }
 
-// #C63926
+h2 {
+  font-family: 'Benne', serif;
+}
 
+h5 {
+  font-family: 'Benne', serif;
+}
+
+h1 {
+  font-family: 'Benne', serif;
+}
+
+h6 {
+  font-family: 'Benne', serif;
+}
