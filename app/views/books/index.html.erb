@@ -7,7 +7,7 @@
   <% @books.each do |book| %>
   <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 16rem;">
     <!-- need to add an image upload for the books -->
-    <%= image_tag "open-book.jpeg", alt: "book-pic", class:"card-img-top" %>
+    <%= image_tag "", alt: "book-pic", class:"card-img-top" %>
     <div class="card-body">
       <h5 class="card-title"><%= link_to book.title, book_path(book) %></h5>
       <h6 class="card-subtitle mb-2 text-muted">Author: <%= book.author %></h6>
