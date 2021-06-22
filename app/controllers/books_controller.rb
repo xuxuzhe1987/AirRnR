@@ -14,11 +14,14 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    authorize @book
   end
 
   def create
     @book = Book.new(book_params)
     @book.user = current_user
+    authorize @book
+
     if @book.save
       redirect_to books_path
     else
@@ -40,6 +43,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     redirect_to books_path
+    authorize @book
   end
 
   private
