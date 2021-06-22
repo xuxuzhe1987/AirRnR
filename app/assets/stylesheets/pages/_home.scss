@@ -6,43 +6,14 @@
   top:0px;
   height: 100vh;
   background-size: cover;
-  background-image: asset-url("bookrow");
+  background-image: asset-url("bookrow.jpeg");
   background-size: cover;
   h1 {
-    color: white;
+    color: #FFFAFA;
     font-family: 'Benne', serif;
     font-size: 70px;
-    color: white;
-    // background: black;
-    // text-shadow: 2px 2px 4px #000000;
-    // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-shadow: 1px 1px 2px black, 0 0 25px darkgray, 0 0 5px gray;
-    // padding-top: 6px;
-    // box-shadow: 2px 2px 2px 1px gold;
   }
-}
-.btn-info {
-  position: relative;
-  top: 30px;
-}
-
-.call {
-  position:relative;
-  top: 60px;
-}
-
-.background-color {
-  background: black;
-  color: white;
-}
-
-.tex-left {
-  font-family: 'BenchNine', sans-serif;
-  top-margin: 8px;
-}
-
-body {
-  background-color: white;
 }
 
 .bordered {
@@ -60,9 +31,4 @@ body {
 
 .p-3 p {
   font-family: 'Benne', serif;
-}
-
-.btn-info {
-  position: relative;
-  top: 10px;
 }
