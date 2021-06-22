@@ -3,6 +3,7 @@
   <%= link_to "Back", root_path, class:"btn btn-info"  %>
 </div>
 <div class="container justify-content-center d-flex flex-wrap">
+
 <% @bookings.each_with_index do |booking, index| %>
   <div class="card shadow p-3 mb-5 bg-body rounded">
     <h5><%= index+1 %>. You booked this at: <br> <%= booking.created_at %></h5>
