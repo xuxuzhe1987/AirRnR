@@ -10,12 +10,16 @@
       <p>Availability: <%= "#{@book.availability? ? '✅' : '❌'}" %> </p>
       <p>Owner: <%= link_to "#{@book.user.name}", user_path %></p>
       <div class="button-helpers">
-        <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
-        <%= link_to "Delete",
-            book_path(@book),
-            method: :delete,
-            data: { confirm: "Are you sure?" },
-            class: 'btn btn-outline-danger' %>
+        <% if policy(Book).edit? %>
+          <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
+        <% end %>
+        <% if policy(Book).destroy? %>
+          <%= link_to "Delete",
+              book_path(@book),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class: 'btn btn-outline-danger' %>
+        <% end %>
         <%= link_to 'Back', books_path, class: 'btn btn-outline-dark' %>
         <%= link_to 'Borrow', new_book_booking_path(@book), class: 'btn btn-outline-secondary' %>
       </div>

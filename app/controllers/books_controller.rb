@@ -3,13 +3,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @books = Book.all
     @books = policy_scope(Book)
-    # @search = params["search"]
-    # if @search.present?
-    #   @title = @search["title"]
-    #   @books = Book.where(title: @title)
-    # end
   end
 
   def new
@@ -20,7 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user = current_user
-    authorize @book
+    authorize @book.user
 
     if @book.save
       redirect_to books_path
@@ -30,14 +24,17 @@ class BooksController < ApplicationController
   end
 
   def show
+    authorize @book
   end
 
   def edit
+    authorize @book
   end
 
   def update
     @book.update(book_params)
     redirect_to book_path(@book)
+    authorize @book
   end
 
   def destroy
@@ -50,7 +47,6 @@ class BooksController < ApplicationController
 
   def set_book
     @book = Book.find(params[:id])
-    authorize @book
   end
 
   def book_params
