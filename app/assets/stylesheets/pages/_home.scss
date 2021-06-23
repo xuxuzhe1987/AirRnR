@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&family=Benne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;1,200&display=swap');
 
 .banner {
   height: 100vh;
@@ -7,10 +8,10 @@
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(245, 246, 252, 0.52)), asset-url("bookrow.jpeg");
   background-size: cover;
   h1 {
-    color: #FFFAFA;
+    color: black;
     font-family: 'Benne', serif;
     font-size: 70px;
-    text-shadow: 1px 1px 2px black, 0 0 25px darkgray, 0 0 5px gray;
+    // text-shadow: 1px 1px 2px black, 0 0 25px darkgray, 0 0 5px gray;
   }
 }
 
@@ -20,13 +21,12 @@
   margin-bottom: 8px;
 }
 .p-3 h2 {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
   font-size: 32px;
 }
 .p-3 h3{
-  font-family: 'Benne', serif;
+  font-family: 'Newsreader', serif;
+  font-style: italic;
   font-size: 24px
-}
-
-.p-3 p {
-  font-family: 'Benne', serif;
 }
