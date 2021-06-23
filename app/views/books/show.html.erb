@@ -7,7 +7,7 @@
       <h5 class="card-subtitle mb-2 text-muted">Author: <%= @book.author %></h5>
       <br>
       <p>Description: <%= @book.description %></p>
-      <p>Availability: <%= @book.availability %></p>
+      <p>Availability: <%= "#{@book.availability? ? '✅' : '❌'}" %> </p>
       <p>Owner: <%= link_to "#{@book.user.name}", user_path %></p>
       <div class="button-helpers">
         <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
