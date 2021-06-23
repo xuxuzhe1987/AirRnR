@@ -5,10 +5,6 @@ class BookPolicy < ApplicationPolicy
     end
   end
 
-  # def new?
-  #   true
-  # end
-
   def create?
     true
   end
@@ -18,13 +14,13 @@ class BookPolicy < ApplicationPolicy
   end
 
   def update?
-    user == record.user
-    # - record: the restaurant passed to the `authorize` method in controller
-    # - user:   the `current_user` signed in with Devise.
+    true
+    # user == record.user
+    # @record.user == @user
   end
 
   def destroy?
-    user == record.user
+    true
   end
 
 end
