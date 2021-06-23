@@ -1,6 +1,6 @@
-<h1>Booking Page</h1>
+<h1>Borrow The Book</h1>
 <%= simple_form_for [ @book, @booking ] do |f| %>
-  <%= f.date_field :starting_date %>
-  <%= f.date_field :ending_date %>
-  <%= f.submit "Booking", class: "btn btn-primary" %>
+  <%= f.date_field :starting_date, class: 'txtComputer' %>
+  <%= f.date_field :ending_date, class: 'txtComputer' %>
+  <%= f.submit "Booking", class: "btn btn-info" %>
 <% end %>
