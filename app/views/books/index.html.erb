@@ -12,7 +12,7 @@
       <h5 class="card-title"><%= link_to book.title, book_path(book) %></h5>
       <h6 class="card-subtitle mb-2 text-muted">Author: <%= book.author %></h6>
       <p class="card-text">Description: <%= book.description %> </p>
-      <p class="card-text">Availability: <%= book.availability %></p>
+      <p class="card-text">Availability: <%= "#{book.availability? ? '✅' : '❌'}" %></p>
       <br>
     </div>
   </div>
