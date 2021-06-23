@@ -1,16 +1,16 @@
-<h1 class="text-center">List All My Bookings</h1>
+<h1 class="text-center">All My Bookings</h1>
 <div class="text-center m-3">
   <%= link_to "Back", root_path, class:"btn btn-info"  %>
 </div>
 <div class="container justify-content-center d-flex flex-wrap">
 
 <% @bookings.each_with_index do |booking, index| %>
-  <div class="card shadow p-3 mb-5 bg-body rounded">
-    <h5><%= index+1 %>. You booked this at: <br> <%= booking.created_at %></h5>
+  <div class="card shadow p-3 mb-5 bg-body rounded show-book">
+    <h5><%= index+1 %> || You booked this at: <br> <%= booking.created_at %></h5>
     <br>
     <h5>Book: <%= booking.book.title %></h5>
     <br>
-    <p>Lender: <%= booking.book.user.name %></p>
+    <p>Owner: <%= booking.book.user.name %></p>
     <p>Period: <%= booking.starting_date %> to <%= booking.ending_date %></p>
   </div>
 <% end %>
