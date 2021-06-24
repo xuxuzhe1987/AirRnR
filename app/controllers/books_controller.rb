@@ -47,13 +47,11 @@ class BooksController < ApplicationController
   private
 
   def authorize_book
-    p @book, '==================='
     authorize @book
   end
 
   def set_book
     @book = Book.find(params[:id])
-    # p @book, '==================='
   end
 
   def book_params

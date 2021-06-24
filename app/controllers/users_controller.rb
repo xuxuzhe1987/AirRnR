@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  # before_action :set_user, only: [:show]
-
-
   def index
     @users = policy_scope(User)
   end
@@ -18,11 +15,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-  # def set_user
-  #   @user = User.find(params[:id])
-  #   authorize @user
-  # end
 
   def user_params
     params.require(:user).permit(:name, :address, :we_chat)
