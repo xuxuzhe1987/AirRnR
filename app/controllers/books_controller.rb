@@ -10,7 +10,7 @@ class BooksController < ApplicationController
       @books = Book.where("title ILIKE ?","%# {params[:search]}%")
     else
       @books = Book.all
-    end  
+    end
   end
 
   def new
@@ -21,7 +21,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user = current_user
-    authorize @book.user
+    authorize @book
 
     if @book.save
       redirect_to books_path
