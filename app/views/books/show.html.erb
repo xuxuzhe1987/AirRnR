@@ -1,7 +1,11 @@
 <div class="container m-3">
   <div class="container d-flex justify-content-evenly">
-    <%= image_tag "book-rise.png", alt: "image of a book"%>
-    <br>
+    <% if @book.photo.attached? %>
+      <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill, alt: "image of a book"%>
+    <% else %>
+      <%= image_tag "book-rise.png", alt: "image of a book"%>
+    <% end %>
+
     <div class="book-container card shadow p-3 mb-5 bg-body rounded card-position show-book">
       <h2 style="font-family: 'Benne', serif;"><%= @book.title %></h2>
       <h5 class="card-subtitle mb-2 text-muted", style="">Author: <%= @book.author %></h5>
@@ -26,5 +30,4 @@
       </div>
     </div>
   </div>
-
 </div>
