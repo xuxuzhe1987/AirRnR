@@ -1,7 +1,7 @@
 <div class="container m-3">
   <div class="container d-flex justify-content-evenly">
     <% if @book.photo.attached? %>
-      <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill, alt: "image of a book"%>
+      <%= cl_image_tag @book.photo.key, height: 400, width: 400, crop: :fill, alt: "image of a book"%>
     <% else %>
       <%= image_tag "book-rise.png", alt: "image of a book"%>
     <% end %>
