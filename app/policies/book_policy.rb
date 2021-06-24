@@ -14,13 +14,12 @@ class BookPolicy < ApplicationPolicy
   end
 
   def update?
-    true
-    # user == record.user
-    # @record.user == @user
+    # p '=====================', record
+    user == record.user
   end
 
   def destroy?
-    true
+    user == record.user
   end
 
 end

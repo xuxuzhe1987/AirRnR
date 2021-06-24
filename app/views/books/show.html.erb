@@ -15,10 +15,10 @@
       <br>
       <p>Availability: <%= "#{@book.availability? ? '✅' : '❌'}" %> </p>
       <div class="button-helpers">
-        <% if policy(Book).edit? %>
+        <% if policy(@book).edit? %>
           <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
         <% end %>
-        <% if policy(Book).destroy? %>
+        <% if policy(@book).destroy? %>
           <%= link_to "Delete",
               book_path(@book),
               method: :delete,
