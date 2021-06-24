@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, :books do
     resources :bookings, only: [ :new, :create]
+      resources :search, only: [:index]
   end
-
-  get '/search' => 'books#search', :as => 'search_page'
 
   resources :bookings, only: [:show] do
     collection do
