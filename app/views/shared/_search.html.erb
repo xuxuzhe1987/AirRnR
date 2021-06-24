@@ -1,9 +1,9 @@
 <%= form_tag(books_path, :method => "get",   
     class: 'form-control') do %>  
-  <div class="input-group">  
+  <div class="input-group txtComputer">
     <%= search_field_tag :search, params[:search], placeholder: "Find a Title", class: "form-control" %>  
     <div class="input-group-btn">  
-      <%= button_tag "Search", :class => 'btn btn-info',:name => nil %>  
+      <%= button_tag "Search", :class => 'btn btn-outline-dark ml-2',:name => nil %>
     </div>  
   </div>  
 <% end %>
