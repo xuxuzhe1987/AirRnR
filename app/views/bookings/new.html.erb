@@ -1,6 +1,12 @@
-<h1>Borrow The Book</h1>
+<h1 class = "text-center">Borrow The Book</h1>
+<div class = "conatiner auto">
+    <div class = "row d-flex justify-content-center">
+        <div class = "col-12 col-md-6 col-lg-3">
+        <div class="bg-white rounded p-3 shadow">
 <%= simple_form_for [ @book, @booking ] do |f| %>
-  <%= f.date_field :starting_date, class: 'txtComputer' %>
-  <%= f.date_field :ending_date, class: 'txtComputer' %>
-  <%= f.submit "Booking", class: "btn btn-info" %>
+  <%= f.date_field :starting_date, class: 'txtComputer form-control my-1' %>
+  <br>
+  <%= f.date_field :ending_date, class: 'txtComputer form-control my-1' %>
+  <br>
+  <%= f.submit "Borrow", class: "btn btn-info form-control my-1" %>
 <% end %>
