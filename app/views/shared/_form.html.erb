@@ -1,21 +1,25 @@
 <%= form_for(@book) do |f| %>
-  <div class="form-group">
+  <div class="form-group txtComputer">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="form-group">
+  <div class="form-group txtComputer">
     <%= f.label :author %>
     <%= f.text_field :author, class: 'form-control' %>
   </div>
-  <div class="form-group">
+  <div class="form-group txtComputer">
     <%= f.label :description %>
     <%= f.text_field :description, class: 'form-control' %>
   </div>
-  <div class="form-group"> 
+  <div class="form-group txtComputer">
     <%= f.label :availability %>
     <%= f.check_box :availability, class: 'form-control' %>
   </div>
+  <div class="form-group txtComputer">
+    <%= f.label :photo %>
+    <%= f.file_field :photo, as: :file, class: 'form-control' %>
+  </div>
   <div class="text-center p-3">
-    <%= f.submit class: 'btn btn-outline-secondary' %>
+    <%= f.submit class: 'btn btn-outline-secondary'%>
   </div>
 <% end %>
