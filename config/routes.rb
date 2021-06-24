@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create]
   end
 
+  get '/search' => 'books#search', :as => 'search_page'
+
   resources :bookings, only: [:show] do
     collection do
       get :mybookings
