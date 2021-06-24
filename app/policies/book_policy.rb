@@ -19,7 +19,7 @@ class BookPolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    user == record.user
   end
 
 end
