@@ -1,31 +1,35 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "flash-better.png", class:"image_tag" %>
-  <% end %>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <li>
-            <%= link_to "My Bookings", mybookings_bookings_path, class: "dropdown-item nav-options" %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+   <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "flash-better.png", class:"image_tag" %>
+  <% end %>
+    <div class = 'mx-auto my-auto' >
+      <%= render "shared/search", book: @book %>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+           <li>
+              <%= link_to "My Bookings", mybookings_bookings_path, class: "dropdown-item nav-options" %>
+            </li>
+            <li>
+              <%= link_to "Edit My Profile", edit_user_registration_path, class: "dropdown-item nav-options" %>
+            </li>
+            <li>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item nav-options" %>
+            </li>
+            <li>
+              <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            </li>
           </li>
-          <li>
-            <%= link_to "Edit My Profile", edit_user_registration_path, class: "dropdown-item nav-options" %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link nav-options" %>
           </li>
-          <li>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item nav-options" %>
-          </li>
-          <li>
-            <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          </li>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link nav-options" %>
-        </li>
-      <% end %>
-    </ul>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
+
 
