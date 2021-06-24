@@ -6,11 +6,10 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
-     true
+    true
   end
 
   def edit?
      user == record.user
   end
-
 end
