@@ -1,6 +1,8 @@
 class BooksController < ApplicationController
   # skip_before_action :authenticate_user!
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_book, except: [:index]
+
 
   def index
     @books = policy_scope(Book)
@@ -15,13 +17,11 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    authorize @book
   end
 
   def create
     @book = Book.new(book_params)
     @book.user = current_user
-    authorize @book
 
     if @book.save
       redirect_to books_path
@@ -31,29 +31,31 @@ class BooksController < ApplicationController
   end
 
   def show
-    authorize @book
   end
 
   def edit
-    authorize @book
   end
 
   def update
     @book.update(book_params)
     redirect_to book_path(@book)
-    authorize @book
   end
 
   def destroy
     @book.destroy
     redirect_to books_path
-    authorize @book
   end
 
   private
 
+  def authorize_book
+    p @book, '==================='
+    authorize @book
+  end
+
   def set_book
     @book = Book.find(params[:id])
+    # p @book, '==================='
   end
 
   def book_params
