@@ -5,7 +5,7 @@
   <div class="card shadow bg-body rounded">
     <div class="image text-center py-3">
       <% if @user.avatar.attached? %>
-        <%= cl_image_tag @user.avatar.key, alt: "user-picture", style: 'width:150px;' %>
+        <%= cl_image_tag @user.avatar.key, alt: "user-picture", style:'width:150px;' %>
       <% else %>
         <%= image_tag "user-show-page", alt: "user-picture" %>
       <% end %>
