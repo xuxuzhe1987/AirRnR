@@ -1,5 +1,5 @@
 <div class="header">
-    <h2 class = text-center> <%= @user.name %>'s Profile Details</h2>
+    <h2 class = text-center> <%= @user.name %>'s Profile Details.</h2>
 </div>
   <div class="container col-4 text-center my-3">
     <div class="card shadow bg-body rounded">
@@ -12,7 +12,7 @@
         <%= @user.name %>
       </p>
       <p>
-        <strong>Address:</strong>
+        <strong>Meeting Place:</strong>
         <%= @user.address %>
       </p>
       <p>
@@ -23,6 +23,6 @@
   </div>
 </div>
 <div class= "text-center ">
-<%= link_to 'Back to All Books', books_path, class: 'btn btn-info my-3' %>
+<%= link_to 'Back to All Books', books_path, class: 'btn btn-outline-dark my-3' %>
 </div>
 
