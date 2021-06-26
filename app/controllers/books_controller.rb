@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   # skip_before_action :authenticate_user!
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_book, except: [:index, :new]
+  before_action :authorize_book, except: [:index, :new, :create]
 
 
   def index
@@ -20,6 +20,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    authorize @book
     @book.user = current_user
 
     if @book.save
