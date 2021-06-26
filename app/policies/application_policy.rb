@@ -15,12 +15,12 @@ class ApplicationPolicy
     false
   end
 
-  def create?
-    false
-  end
-
   def new?
     create?
+  end
+
+  def create?
+    false
   end
 
   def update?
