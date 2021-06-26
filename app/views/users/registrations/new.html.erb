@@ -29,6 +29,10 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "Name" }%>
+                <%= f.input :avatar,
+                  as: :file,
+                  required: true,
+                  autofocus: true %>
                 <div class="form-actions text-center my-5">
                   <%= f.button :submit, "Sign up",class: "btn btn-info btn-primary-spacing" %>
                 </div>
