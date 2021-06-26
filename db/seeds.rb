@@ -8,6 +8,7 @@
 Booking.destroy_all
 User.destroy_all
 Book.destroy_all
+puts 'everything has been destroyed'
 
 10.times do
   user = User.create!(
@@ -15,9 +16,10 @@ Book.destroy_all
     address: Faker::Address.street_address,
     email: Faker::Internet.email,
     we_chat: Faker::Alphanumeric.alphanumeric(number: 10),
-    password: "123456"
-    )
-10.times do
+    password: "123456")
+    puts "created user #{user.name}"
+
+1.times do
   book = Book.create!(
     user: user,
     title: Faker::Book.title,
@@ -27,3 +29,4 @@ Book.destroy_all
     )
   end
 end
+puts 'everything has been created'
