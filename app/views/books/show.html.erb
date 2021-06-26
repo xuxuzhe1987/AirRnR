@@ -1,19 +1,19 @@
 <div class="container m-3">
   <div class="container d-flex justify-content-evenly">
     <% if @book.photo.attached? %>
-      <%= cl_image_tag @book.photo.key, height: 400, width: 400, crop: :fill, alt: "image of a book"%>
+      <%= cl_image_tag @book.photo.key, height: 400, width: 300, crop: :fill, alt: "image of a book"%>
     <% else %>
       <%= image_tag "book-rise.png", alt: "image of a book"%>
     <% end %>
 
-    <div class="book-container card shadow p-3 mb-5 bg-body rounded card-position show-book">
+    <div class="book-container card shadow p-3 mb-5 bg-body rounded card-position show-book", style="margin-left: 40px;">
       <h2 style="font-family: 'Benne', serif;"><%= @book.title %></h2>
       <h5 class="card-subtitle mb-2 text-muted", style="">Author: <%= @book.author %></h5>
       <br>
       <p>Description: <%= @book.description %></p>
       <p>Owner: <%= link_to "#{@book.user.name}", user_path(@book.user) %></p>
       <br>
-      <p>Availability: <%= "#{@book.availability? ? '✅' : '❌'}" %> </p>
+      <p>Available? <%= "#{@book.availability? ? '✅' : '❌'}" %> </p>
       <div class="button-helpers">
         <% if policy(@book).edit? %>
           <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-dark' %>
