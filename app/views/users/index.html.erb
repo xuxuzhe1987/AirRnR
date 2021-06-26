@@ -1,8 +1,12 @@
 <h1 class = "text-center">LIST ALL USERS</h1>
-<ul class>
-  <% @users.each do |user| %>
-    <li class = "text-center"><%= link_to user.name, user %></li>
-  <% end %>
-</ul>
-
+  <div class="col-8 offset-2">
+    <ul class="text-center txtComputer" style="list-style-position: inside">
+      <% @users.each do |user| %>
+        <li><%= link_to user.name, user %></li>
+      <% end %>
+    </ul>
+    <div class = text-center>
+      <%= link_to 'Back', books_path, class: 'btn btn-dark text-center px-3' %>
+    </div>
+  </div>
 

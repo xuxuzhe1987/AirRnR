@@ -1,26 +1,28 @@
 <div class="header">
-    <h2> <%= @user.name %>'s profile Details!</h2>
+    <h2 class = text-center> <%= @user.name %>'s Profile Details</h2>
 </div>
-
-<div class="right">
-  <div class="card shadow p-3 mb-5 bg-body rounded">
-  <br>
-  <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </p>
-  <p>
-    <strong>Address:</strong>
-    <%= @user.address %>
-  </p>
-  <p>
-    <strong>WeChat:</strong>
-    <%= @user.we_chat %>
-  </p>
-  </div>
-  <div class="image">
+  <div class="container col-4 text-center my-3">
+    <div class="card shadow bg-body rounded">
+    <div class="image text-center py-3">
     <%= image_tag "user-show-page", alt: "user-picture" %>
   </div>
+    <div class= "text-center txtComputer">
+      <p>
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </p>
+      <p>
+        <strong>Address:</strong>
+        <%= @user.address %>
+      </p>
+      <p>
+        <strong>WeChat:</strong>
+        <%= @user.we_chat %>
+      </p>
+    </div>
+  </div>
+</div>
+<div class= "text-center ">
+<%= link_to 'Back to All Books', books_path, class: 'btn btn-info my-3' %>
 </div>
 
-<%= link_to 'Back to All Books', books_path, class: 'btn btn-outline-dark my-3' %>
