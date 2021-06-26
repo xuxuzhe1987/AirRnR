@@ -1,9 +1,8 @@
 <h2 class= "text-center">Log in.</h2>
-<div class = "container auto">
-  <div class = "row d-flex justify-content-center">
+<div class = "conatiner auto">
     <div class = "row d-flex justify-content-center">
       <div class = "col-12 col-md-6 col-lg-3">
-        <div class="bg-white rounded p-3 shadow">
+        <div class="bg-white rounded p-1 shadow">
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs txtComputer">
             <%= f.input :email,
@@ -14,8 +13,8 @@
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-            <div class="form-actions text-center my-5">
-            <%= f.button :submit, "Log in" %>
+            <div class="form-actions text-center my-3">
+            <%= f.button :submit, "Log in", class: "btn btn-info form-control my-1" %>
             </div>
           </div>
         </div>
