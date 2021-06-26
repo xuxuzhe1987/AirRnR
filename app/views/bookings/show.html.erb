@@ -1,16 +1,15 @@
 <h1 class="text-center">Booking Details.</h1>
 </div>
 <div class="text-center">
-  <%= link_to "Back to Books", books_path, class: "btn btn-info"  %>
+  <%= link_to "Back to Books", books_path, class: "btn btn-outline-dark" %>
 </div>
 <div class="justify-content-center d-flex m-3">
-  <div class="card shadow p-3 mb-5 bg-body rounded show-book", style="width: 20rem;">
+  <div class="card shadow p-3 mb-5 bg-body rounded show-book text-center", style="width: 16rem;">
     <h5>Book: <%= @booking.book.title %></h5>
+    <p>Owner Name: <br> <%= @booking.book.user.name %></p>
     <p>Booking Period: <br> <%= @booking.starting_date %> to <%= @booking.ending_date %></p>
     <br>
-    <p>Owner Name: <%= @booking.book.user.name %></p>
-    <p>Owner WeChat: <%= @booking.book.user.we_chat %></p>
-    <p>Owner Email: <%= @booking.book.user.email %></p>
-    <p>Owner Address: <%= @booking.book.user.address %></p>
+    <p style="text-decoration: underline;">Contact Details: </p>
+    <p>WeChat: <%= @booking.book.user.we_chat %> <br> Email: <%= @booking.book.user.email %> <br> Address: <%= @booking.book.user.address %></p>
   </div>
 </div>
