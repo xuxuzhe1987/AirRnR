@@ -19,7 +19,11 @@
   </p>
   </div>
   <div class="image">
-    <%= image_tag "user-show-page", alt: "user-picture" %>
+    <% if @user.avatar.attached? %>
+      <%= cl_image_tag @user.avatar.key, alt: "user-picture" %>
+    <% else %>
+      <%= image_tag "user-show-page", alt: "user-picture" %>
+    <% end %>
   </div>
 </div>
 
