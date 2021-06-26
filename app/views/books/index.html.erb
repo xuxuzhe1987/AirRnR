@@ -8,7 +8,7 @@
     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 16rem;">
 
       <% if book.photo.attached? %>
-        <%= cl_image_tag book.photo.key, height: 150, width: 150, crop: :fill, alt: "image of a book"%>
+        <%= cl_image_tag book.photo.key, height: 150, width: 150, crop: :fill, alt: "image of a book", class:"card-img-top" %>
       <% else %>
         <%= image_tag "book-rise.png", alt: "book-pic", class:"card-img-top" %>
       <% end %>
