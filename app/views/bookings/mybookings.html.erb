@@ -1,6 +1,6 @@
 <h1 class="text-center">My Bookings.</h1>
 <div class="text-center m-3">
-  <%= link_to "Back", root_path, class:"btn btn-info"  %>
+  <%= link_to "Back to Books", books_path, class:"btn btn-outline-dark"  %>
 </div>
 <div class="container justify-content-center d-flex flex-wrap">
 
@@ -11,6 +11,8 @@
     <h5>Book: <%= booking.book.title %></h5>
     <br>
     <p>Owner: <%= booking.book.user.name %></p>
+    <p> Wechat: <%= booking.book.user.we_chat  %> </p>
+    <br>
     <p>Period: <%= booking.starting_date %> to <%= booking.ending_date %></p>
   </div>
 <% end %>
