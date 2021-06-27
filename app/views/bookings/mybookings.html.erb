@@ -4,7 +4,7 @@
 </div>
 <div class="container justify-content-center d-flex flex-wrap">
 
-<% @bookings.each_with_index do |booking, index| %>
+  <% @bookings.each_with_index do |booking, index| %>
   <div class="card shadow p-3 mb-5 bg-body rounded show-book">
     <h5><%= index+1 %> || You booked this at: <br> <%= booking.created_at %></h5>
     <br>
@@ -15,7 +15,7 @@
     <br>
     <p>Period: <%= booking.starting_date %> to <%= booking.ending_date %></p>
   </div>
-<% end %>
+  <% end %>
 </div>
 
 
